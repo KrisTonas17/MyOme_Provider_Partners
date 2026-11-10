@@ -1,7 +1,0 @@
-{
-  "name": "myome-partners",
-  "version": "1.0.0",
-  "private": true,
-  "description": "Partner with MyOme landing page and inquiry form",
-  "engines": { "node": ">=18" }
-}
