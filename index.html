@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Partner with MyOme</title>
+<meta name="description" content="Bring whole-genome proactive health to your practice. Partner with MyOme.">
+<link rel="icon" type="image/png" href="/myome-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#003595; --blue:#0A47C2; --teal:#0094AA; --teal-2:#0A8FB3;
+  --purple:#9C2A8C; --sky:#2E9BEA; --green:#6CB33E;
+  --ink:#1F2A44; --text:#3E4659; --muted:#6B7387; --line:#D6E5F2; --wash:#F3F8FD; --white:#FFFFFF; --error:#B3261E;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{font-family:"Kumbh Sans",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--text);background:var(--wash);line-height:1.5}
+a{color:var(--navy)}
+.hero{position:relative;overflow:hidden;color:var(--white);background:linear-gradient(135deg,var(--blue) 0%,var(--teal-2) 100%)}
+.hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.28) 1.2px,transparent 1.3px);background-size:22px 22px;opacity:.45;pointer-events:none}
+.wrap{position:relative;max-width:1160px;margin:0 auto;padding:0 28px}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:28px 0}
+.nav img{height:38px;width:auto;display:block}
+.nav a{color:var(--white);font-size:15px;font-weight:500;text-decoration:none;opacity:.9}
+.nav a:hover{opacity:1;text-decoration:underline}
+.grid{display:grid;grid-template-columns:1.05fr 1fr;grid-template-areas:"intro card" "proof card";grid-template-rows:auto 1fr;column-gap:56px;align-items:start;padding:36px 0 96px}
+.intro{grid-area:intro}.proof{grid-area:proof}.card{grid-area:card}
+h1{font-size:clamp(40px,5.4vw,64px);font-weight:700;line-height:1.04;letter-spacing:-.01em}
+.lede{font-size:19px;line-height:1.55;margin-top:22px;max-width:520px;color:#E6F4FF}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:40px;max-width:520px}
+.stat b{display:block;font-size:34px;font-weight:700;line-height:1}
+.stat span{display:block;font-size:14px;margin-top:6px;color:#D7ECFA}
+.points{list-style:none;margin-top:40px;display:grid;gap:14px;max-width:520px}
+.points li{display:flex;gap:12px;font-size:16px;color:#F1F8FF}
+.points li::before{content:"";flex:0 0 8px;height:8px;margin-top:8px;border-radius:4px;background:#BFF1FF}
+.card{background:var(--white);color:var(--text);border-radius:18px;padding:34px;box-shadow:0 24px 60px rgba(0,30,90,.25)}
+.card h2{font-size:24px;font-weight:700;color:var(--navy);line-height:1.2}
+.card .sub{font-size:15px;color:var(--muted);margin-top:6px}
+form{margin-top:24px;display:grid;gap:16px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+label{display:block;font-size:14px;font-weight:600;color:var(--ink);margin-bottom:6px}
+label .opt{font-weight:400;color:var(--muted)}
+input,textarea{width:100%;font:inherit;font-size:16px;color:var(--ink);background:var(--white);border:1.5px solid var(--line);border-radius:10px;padding:12px 14px;transition:border-color .15s}
+textarea{min-height:116px;resize:vertical}
+input:focus,textarea:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px rgba(0,148,170,.18)}
+.field.invalid input,.field.invalid textarea{border-color:var(--error)}
+.err{display:none;font-size:13px;color:var(--error);margin-top:5px}
+.field.invalid .err{display:block}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+button{font:inherit;font-size:17px;font-weight:600;color:var(--white);background:var(--navy);border:0;border-radius:10px;padding:15px 20px;cursor:pointer;transition:background .15s}
+button:hover{background:#002a78}
+button:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+button[disabled]{opacity:.7;cursor:progress}
+.formerr{display:none;font-size:14px;color:var(--error);background:#FDECEA;border-radius:8px;padding:10px 12px}
+.fine{font-size:12.5px;color:var(--muted)}
+.done{display:none;text-align:left;padding:8px 0}
+.done .check{width:56px;height:56px;border-radius:28px;background:var(--teal);display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+.done h2{font-size:26px}
+.done p{font-size:16px;margin-top:10px;color:var(--text)}
+.card.sent form,.card.sent .head{display:none}
+.card.sent .done{display:block}
+.how{max-width:1160px;margin:0 auto;padding:72px 28px 40px}
+.how h3{font-size:28px;font-weight:700;color:var(--navy)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:28px;counter-reset:s}
+.step{border-top:3px solid var(--navy);padding-top:16px}
+.step:nth-child(2){border-color:var(--teal)}.step:nth-child(3){border-color:var(--purple)}.step:nth-child(4){border-color:var(--sky)}
+.step h4{font-size:17px;color:var(--ink);font-weight:700}
+.step h4::before{counter-increment:s;content:counter(s) ". ";color:var(--muted);font-weight:600}
+.step p{font-size:15px;margin-top:6px}
+footer{max-width:1160px;margin:0 auto;padding:32px 28px 48px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+footer img{height:26px}
+@media (max-width:900px){.grid{grid-template-columns:1fr;grid-template-areas:"intro" "card" "proof";grid-template-rows:auto;row-gap:32px;padding:20px 0 56px}.lede{max-width:none}.stats{margin-top:8px;max-width:none}.points{max-width:none;margin-top:28px}.steps{grid-template-columns:1fr 1fr}.how{padding-top:56px}}
+@media (max-width:560px){.wrap{padding:0 20px}.nav{padding:20px 0}.nav img{height:32px}.row2{grid-template-columns:1fr}.card{padding:24px 20px;border-radius:16px}.card h2{font-size:22px}.lede{font-size:17px;margin-top:16px}.stats{gap:14px}.stat b{font-size:26px}.stat span{font-size:12.5px}.points li{font-size:15px}.steps{grid-template-columns:1fr}.how{padding:48px 20px 32px}.how h3{font-size:24px}footer{padding:28px 20px 40px}.nav a{display:none}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <nav class="nav">
+      <img src="/myome-logo-white.png" alt="MyOme">
+      <a href="https://www.myome.com" target="_blank" rel="noopener">myome.com</a>
+    </nav>
+    <div class="grid">
+      <div class="intro">
+        <h1>Partner with MyOme</h1>
+        <p class="lede">Bring whole-genome proactive health to your patients. One simple sample gives you clear, actionable reports on inherited disease risk, medication response and risk for common conditions, so you can personalize care before problems start.</p>
+      </div>
+      <div class="proof">
+        <div class="stats">
+          <div class="stat"><b>95%+</b><span>of patients carry an actionable medication response variant</span></div>
+          <div class="stat"><b>10%+</b><span>carry a high-risk hereditary cancer or cardiac variant</span></div>
+          <div class="stat"><b>~30%</b><span>are high risk for a common disease by polygenic risk</span></div>
+        </div>
+        <ul class="points">
+          <li>Turnkey for your team: kits, sequencing, reporting and genetic counseling handled by MyOme</li>
+          <li>Sequence once, analyze for life, with new insights as science advances</li>
+          <li>CLIA certified, CAP accredited lab and HIPAA compliant</li>
+        </ul>
+      </div>
+
+      <div class="card" id="card" aria-live="polite">
+        <div class="head">
+          <h2>Start a partnership conversation</h2>
+          <p class="sub">Tell us a little about your practice and we'll follow up.</p>
+        </div>
+        <form id="partner-form" novalidate>
+          <div class="field" data-name="clinicName">
+            <label for="clinicName">Clinic name</label>
+            <input id="clinicName" name="clinicName" autocomplete="organization" maxlength="200" required>
+            <p class="err">Please enter your clinic name.</p>
+          </div>
+          <div class="field" data-name="contactName">
+            <label for="contactName">Main contact name</label>
+            <input id="contactName" name="contactName" autocomplete="name" maxlength="200" required>
+            <p class="err">Please enter a contact name.</p>
+          </div>
+          <div class="row2">
+            <div class="field" data-name="phone">
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" maxlength="40" required>
+              <p class="err">Please enter a valid phone number.</p>
+            </div>
+            <div class="field" data-name="email">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" maxlength="200" required>
+              <p class="err">Please enter a valid email address.</p>
+            </div>
+          </div>
+          <div class="field" data-name="patientsPerMonth">
+            <label for="patientsPerMonth">Expected patients interested in MyOme testing per month</label>
+            <input id="patientsPerMonth" name="patientsPerMonth" type="number" inputmode="numeric" min="0" max="1000000" step="1" required>
+            <p class="err">Please enter a whole number.</p>
+          </div>
+          <div class="field" data-name="deployment">
+            <label for="deployment">How do you expect to offer MyOme in your practice?</label>
+            <textarea id="deployment" name="deployment" maxlength="4000" placeholder="For example: offered at annual physicals, included in a membership, for patients with a family history" required></textarea>
+            <p class="err">Please share a few words on how you'd offer MyOme.</p>
+          </div>
+          <div class="hp" aria-hidden="true">
+            <label for="website">Website</label>
+            <input id="website" name="website" tabindex="-1" autocomplete="off">
+          </div>
+          <p class="formerr" id="formerr" role="alert"></p>
+          <button type="submit" id="submit">Submit</button>
+          <p class="fine">Your information is used only to follow up about a MyOme partnership.</p>
+        </form>
+        <div class="done" id="done" tabindex="-1">
+          <div class="check"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+          <h2>Thank you for your interest in partnering with MyOme</h2>
+          <p>We've received your information. A member of our partnerships team will be in touch shortly to learn more about your practice and talk through next steps.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="how" aria-labelledby="how">
+  <h3 id="how">How it works for your patients</h3>
+  <div class="steps">
+    <div class="step"><h4>Collect</h4><p>A simple cheek swab or blood sample, in clinic or at home.</p></div>
+    <div class="step"><h4>Sequence</h4><p>MyOme sequences the whole genome in our CLIA/CAP lab.</p></div>
+    <div class="step"><h4>Report</h4><p>Clear reports on inherited risk, medication response and overall disease risk.</p></div>
+    <div class="step"><h4>Act</h4><p>Genetic counseling and a personalized care plan with you.</p></div>
+  </div>
+</section>
+
+<footer>
+  <img src="/myome-logo.png" alt="MyOme">
+  <span>&copy; <span id="yr">2026</span> MyOme, Inc. All rights reserved.</span>
+</footer>
+
+<script>
+(function(){
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  var form = document.getElementById('partner-form');
+  var card = document.getElementById('card');
+  var btn = document.getElementById('submit');
+  var formErr = document.getElementById('formerr');
+  var emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+  function val(n){ return (form.elements[n].value || '').trim(); }
+  function setInvalid(n, bad){ var f = form.querySelector('[data-name="'+n+'"]'); if (f) f.classList.toggle('invalid', bad); return bad; }
+
+  function validate(){
+    var bad = false, first = null;
+    function check(n, cond){ var b = setInvalid(n, !cond); if (b && !first) first = n; bad = bad || b; }
+    check('clinicName', val('clinicName').length > 0);
+    check('contactName', val('contactName').length > 0);
+    check('phone', val('phone').replace(/\D/g,'').length >= 7);
+    check('email', emailRe.test(val('email')));
+    check('patientsPerMonth', /^\d+$/.test(val('patientsPerMonth')));
+    check('deployment', val('deployment').length > 0);
+    if (first) form.elements[first].focus();
+    return !bad;
+  }
+
+  form.addEventListener('input', function(e){ var f = e.target.closest('.field'); if (f) f.classList.remove('invalid'); });
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    formErr.style.display = 'none';
+    if (!validate()) return;
+    btn.disabled = true; btn.textContent = 'Sending...';
+    var data = {
+      clinicName: val('clinicName'), contactName: val('contactName'), phone: val('phone'),
+      email: val('email'), patientsPerMonth: val('patientsPerMonth'), deployment: val('deployment'),
+      website: val('website')
+    };
+    fetch('/api/submit', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(data) })
+      .then(function(r){ return r.json().catch(function(){ return {}; }).then(function(j){ return { ok: r.ok, j: j }; }); })
+      .then(function(res){
+        if (!res.ok) throw new Error(res.j.error || 'Something went wrong.');
+        card.classList.add('sent');
+        document.getElementById('done').focus();
+      })
+      .catch(function(err){
+        formErr.textContent = (err && err.message ? err.message : 'Something went wrong.') + ' Please try again, or email kris.tonas@myome.com.';
+        formErr.style.display = 'block';
+        btn.disabled = false; btn.textContent = 'Submit';
+      });
+  });
+})();
+</script>
+</body>
+</html>
